@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+
+body {
+  background-color: #E1D4C9;
+  color: #403F3D;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.4rem;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.logo {
+  line-height: 0;
+}
+
+nav ul {
+  list-style:none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.wrapper__header {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__img {
+  height: 60px;
+}
+
+.menu__list {
+  display: flex;
+  gap: 4rem;
+  color: #403F3D;
+}
+
+.menu__list-item {
+  position: relative;
+}
+
+
+.menu__list-item::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 0.2rem;
+  top: 2.5rem;
+  left: 0;
+  background-color: #403F3D;
+  transform: scaleX(0);
+  transition: 0.5s ease-in-out;
+}
+
+.menu__list-item:hover::before {
+  transform: scaleX(1);
+}
+
+.header__menu {
+  position: relative;
+  padding-right: 2.8rem;
+}
+
+.header__menu::after {
+  content: '';
+  position: absolute;
+  background-image: url(../assets/icon/coffee-cup.svg);
+  width: 2rem;
+  height: 2rem;
+  top: 0;
+  margin-left: 0.8rem;
+}
+
+.logo__header {
+  height: 6rem;
+}
+
+.wrapper__enjoy {
+  background: lightgray 50% / cover no-repeat url(../assets/img/enjoy.jpg);
+  border-radius: 4rem;
+  margin-top: 2rem;
+}
+
+.enjoy__content {
+  padding: 10rem 0 10rem 10rem;
+  width: 63rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.enjoy__title {
+  color: #E1D4C9;
+  font-family: Inter;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 7.56rem;
+  margin: 0;
+}
+
+.color__accent {
+  color: #B0907A;
+  font-style: italic;
+}
+
+.enjoy__text {
+  color: #E1D4C9;
+  font-weight: 400;
+}
+
+.button__menu {
+  border-radius: 100px;
+  background: #E1D4C9;
+  width: 20rem;
+  padding: 2rem 0;
+  color: #403F3D;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.4rem;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.button__menu-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.8rem;
+  transition: opacity 0.3s ease;
+  display: none;
+}
+
+.button__menu:hover > .button__menu-icon {
+  display: inline-block;
+}

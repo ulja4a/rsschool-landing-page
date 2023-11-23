@@ -39,8 +39,14 @@ nav ul {
   margin: 0;
 }
 
-p {
+p,
+h2,
+h3,
+span,
+div {
   margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .wrapper {
@@ -169,4 +175,95 @@ p {
 
 .button__menu:hover > .button__menu-icon {
   display: inline-block;
+}
+
+.wrapper__favorite {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.favorite__title {
+  color: #403F3D;
+  text-align: center;
+  font-family: Inter;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 7.5rem;
+}
+
+.favorite__slider {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favorite__slider-main {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__card {
+  width: 115.2rem;
+  text-align: center;
+}
+
+.slider__card-content {
+  padding-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.card-content__title,
+.card-content__price {
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+.card-content__description {
+  font-weight: 400;
+}
+
+.slide__icon-next {
+  transform: rotate(180deg);
+}
+
+.slide__icon:hover {
+  cursor: pointer;
+}
+
+.slide__icon:hover svg {
+  fill: #665F55;
+}
+
+.slide__icon:hover svg path{
+  stroke: #E1D4C9;
+}
+
+.favorite__slider-pagination {
+  font-size: 0;
+  line-height: 0;
+}
+
+.element__pagination {
+  margin-left: 1.2rem;
+  font-size: 0;
+}
+
+.element__pagination:first-child {
+  margin-left: 0;
+}
+
+
+.active svg rect {
+  fill: #665F55;
 }

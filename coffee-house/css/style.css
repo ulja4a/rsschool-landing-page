@@ -192,7 +192,8 @@ img {
 }
 
 .favorite__title,
-.about__title {
+.about__title,
+.mobile__title {
   color: #403F3D;
   font-family: Inter;
   font-size: 6rem;
@@ -319,4 +320,73 @@ img {
 
 .about__image:hover > .about_image {
   transform: scale(0.9);
+}
+
+.wrapper__mobile {
+  margin-top: 10rem;
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+}
+
+.mobile__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.mobile__description {
+  font-weight: 400;
+}
+
+.mobile__buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.mobile__button {
+  border-radius: 100px;
+  border: 1px solid #665F55;
+  background: transparent;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 1.2rem 2rem;
+}
+
+.mobile__button:hover {
+  background-color: #665F55;
+}
+
+.mobile__button:hover > .mobile__text > .app_text,
+.mobile__button:hover > .mobile__text > .app_title {
+  color: #E1D4C9;
+}
+
+.mobile__button:hover svg path{
+  fill: #E1D4C9;
+}
+
+.mobile__text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0;
+  width: 11.6rem;
+}
+
+.app_text {
+  color: #403F3D;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+.app_title {
+  color: #403F3D;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+div.mobile__image {
+  height: 63rem;
 }

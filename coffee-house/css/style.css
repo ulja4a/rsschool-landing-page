@@ -43,7 +43,8 @@ p,
 h2,
 h3,
 span,
-div {
+div,
+img {
   margin: 0;
   padding: 0;
   border: 0;
@@ -187,8 +188,12 @@ div {
 }
 
 .favorite__title {
-  color: #403F3D;
   text-align: center;
+}
+
+.favorite__title,
+.about__title {
+  color: #403F3D;
   font-family: Inter;
   font-size: 6rem;
   font-style: normal;
@@ -266,4 +271,52 @@ div {
 
 .active svg rect {
   fill: #665F55;
+}
+
+.wrapper__about {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.about__galery-item1 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.about__galery-item2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: -12rem;
+}
+
+.about__image {
+  width: 66rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.big__image {
+  height: 59rem;
+}
+
+.small__image {
+  height: 43rem;
+}
+
+.about_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  scale: 1.1;
+}
+
+.about__image:hover > .about_image {
+  transform: scale(0.9);
 }

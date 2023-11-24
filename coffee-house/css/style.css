@@ -4,6 +4,7 @@
 html {
   box-sizing: border-box;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -193,7 +194,8 @@ img {
 
 .favorite__title,
 .about__title,
-.mobile__title {
+.mobile__title,
+.footer__title {
   color: #403F3D;
   font-family: Inter;
   font-size: 6rem;
@@ -249,10 +251,12 @@ img {
 
 .slide__icon:hover svg {
   fill: #665F55;
+  transition: fill 0.3s ease;
 }
 
 .slide__icon:hover svg path{
   stroke: #E1D4C9;
+  transition: stroke 0.3s ease;
 }
 
 .favorite__slider-pagination {
@@ -361,10 +365,12 @@ img {
 .mobile__button:hover > .mobile__text > .app_text,
 .mobile__button:hover > .mobile__text > .app_title {
   color: #E1D4C9;
+  transition: color 0.3s ease;
 }
 
 .mobile__button:hover svg path{
   fill: #E1D4C9;
+  transition: fill 0.3s ease;
 }
 
 .mobile__text {
@@ -389,4 +395,98 @@ img {
 
 div.mobile__image {
   height: 63rem;
+}
+
+.wrapper__footer {
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  background-color: #665F55;
+  border-radius: 4rem;
+}
+
+.footer__content {
+  margin: 10rem 5rem 10rem 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.footer__social {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social_circle {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 0.1rem solid #C1B6AD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social_circle:hover {
+  background: #C1B6AD;
+}
+
+.social_circle:hover svg path {
+  stroke: #403F3D;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.contact__title {
+  color: #E1D4C9;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+.contact__links,
+.contact__links-effect {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.contact__links-effect {
+  width: 18.2rem;
+}
+
+.contact__place,
+.contact__tel,
+.time {
+  display: flex;
+  position: relative;
+  gap: 0.8rem;
+}
+
+.contact__place::after,
+.contact__tel::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0.2rem;
+  top: 2.5rem;
+  left: 0;
+  background-color: #E1D4C9;
+  
+  transition: 0.5s ease-in-out;
+}
+
+.contact__place:hover::after,
+.contact__tel:hover::after {
+  width: 100%;
+}
+
+.contact__text {
+  color: #E1D4C9;
 }

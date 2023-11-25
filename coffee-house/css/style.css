@@ -585,3 +585,65 @@ div.mobile__image {
 .text_colored {
   color: #E1D4C9;
 }
+
+.cards__menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4rem;
+}
+
+.card_menu {
+  display: flex;
+  flex-direction: column;
+  width: 31rem;
+  border: 1px solid #C1B6AD;
+  border-radius: 4rem;
+}
+
+.card_menu:hover > .card_menu-image > .menu-img {
+  transform: scale(0.9);
+  transition: 0.5s ease-in-out;
+}
+
+.card_menu-image {
+  width: 31rem;
+  height: 31rem;
+  flex-shrink: 0;
+  border-radius: 4rem;
+  overflow: hidden;
+}
+
+.menu-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  scale: 1.1;
+}
+
+.card_menu-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  min-height: 19.6rem;
+}
+
+.card_menu-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.card_menu-title,
+.card_menu-price {
+  color: #403F3D;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+
+.card_menu-description {
+  font-weight: 400;
+}

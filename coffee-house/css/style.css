@@ -556,35 +556,31 @@ div.mobile__image {
   align-items: center;
   gap: 0.8rem;
   padding: 0.8rem 1.6rem 0.8rem 0.8rem;
-}
-
-.menu__button:hover {
-  background-color: #665F55;
-}
-
-.menu__button:hover .menu__text {
-  color: #E1D4C9;
-}
-
-.button_colored {
-  border: none;
-  background: #665F55;
-}
-
-.button_colored:hover {
-  cursor: default;
-}
-
-.menu__text {
   color: #403F3D;
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 2.4rem;
 }
 
-.text_colored {
+.menu__button:hover {
+  background-color: #665F55;
+}
+
+.menu__button:hover {
+  color: #E1D4C9;
+  cursor: pointer;
+}
+
+.button_colored {
+  border: none;
+  background: #665F55;
   color: #E1D4C9;
 }
+
+.button_colored:hover {
+  cursor: default;
+}
+
 
 .cards__menu {
   display: flex;

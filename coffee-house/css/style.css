@@ -138,6 +138,49 @@ li {
   height: 6rem;
 }
 
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.menu__theme-switcher {
+  display: flex;
+  align-items: center;
+  border: 1px solid #C1B6AD;
+  border-radius: 10rem;
+  gap: 0.8rem;
+  padding: 0.4rem;
+}
+
+.theme-switcher__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.theme-switcher__icon {
+  width: 22px;
+  height: 22px;
+}
+
+.theme-switcher__btn.active {
+  background-color: #B0907A;
+  color: #e1d4c9;
+}
+
+.theme-switcher__btn:hover {
+  background-color: #665f55;
+  color: #e1d4c9;
+}
+
 .wrapper__enjoy {
   background: lightgray 50% / cover no-repeat url(../assets/img/enjoy.jpg);
   border-radius: 4rem;

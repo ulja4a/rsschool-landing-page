@@ -12,6 +12,9 @@
 
   --border-primary: #c1b6ad;
   --border-inverse: #665f55;
+
+  --social-hover-bg: #c1b6ad;
+  --social-hover-icon: #403f3d;
 }
 
 /*для Dark-theme*/
@@ -26,6 +29,9 @@
 
   --border-primary: #665f55;
   --border-inverse: #c1b6ad;
+
+  --social-hover-bg: #292826;
+  --social-hover-icon: #e1d4c9;
 }
 
 [data-theme="dark"] .logo__img-light {
@@ -34,6 +40,10 @@
 
 [data-theme="dark"] .logo__img-dark {
   display: block;
+}
+
+[data-theme="dark"] .header__menu::after {
+  background-image: url(../assets/icon/coffee-cup-dark.svg);
 }
 
 html {
@@ -352,18 +362,33 @@ li {
   transform: rotate(180deg);
 }
 
+.slide__icon {
+  color: var(--border-inverse);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.slide__icon svg {
+  transition: fill 0.3s ease;
+}
+
+.slide__icon svg path {
+  transition: stroke 0.3s ease;
+}
+
 .slide__icon:hover {
   cursor: pointer;
   transition: 0.5s ease-in-out;
+  color: var(--slider-hover-bg);
 }
 
 .slide__icon:hover svg {
-  fill: #665F55;
+  fill: var(--bg-container);
   transition: fill 0.3s ease;
 }
 
 .slide__icon:hover svg path{
-  stroke: #E1D4C9;
+  stroke: var(--text-inverse);
   transition: stroke 0.3s ease;
 }
 
@@ -460,6 +485,7 @@ li {
   border-radius: 100px;
   border: 1px solid var(--border-inverse);
   background: transparent;
+  color: var(--text-primary);
   display: flex;
   gap: 0.8rem;
   align-items: center;
@@ -477,7 +503,7 @@ li {
 }
 
 .mobile__button:hover svg path{
-  fill: #E1D4C9;
+  fill: var(--text-inverse);
   transition: fill 0.3s ease;
 }
 
@@ -551,12 +577,16 @@ div.mobile__image {
   align-items: center;
 }
 
+.social_circle svg path {
+  stroke: var(--text-inverse);
+}
+
 .social_circle:hover {
-  background: var(--border-primary);
+  background: var(--social-hover-bg);
 }
 
 .social_circle:hover svg path {
-  stroke: #403F3D;
+  stroke: var(--social-hover-icon);
 }
 
 .footer__contact {

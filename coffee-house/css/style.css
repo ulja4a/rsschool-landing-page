@@ -42,8 +42,8 @@ html {
 
 
 body {
-  background-color: #E1D4C9;
-  color: #403F3D;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
   font-family: 'Inter', sans-serif;
   font-size: 1.6rem;
   font-style: normal;
@@ -104,7 +104,7 @@ li {
 .menu__list {
   display: flex;
   gap: 4rem;
-  color: #403F3D;
+  color: var(--text-primary);
 }
 
 .menu__list-item {
@@ -125,7 +125,7 @@ li {
   height: 0.2rem;
   top: 2.5rem;
   left: 0;
-  background-color: #403F3D;
+  background-color: var(--text-primary);
   transform: scaleX(0);
   transition: 0.5s ease-in-out;
 }
@@ -142,7 +142,7 @@ li {
   height: 0.2rem;
   top: 2.5rem;
   left: 0;
-  background-color: #403F3D;
+  background-color: var(--text-primary);
   transform: scaleX(1);
 }
 
@@ -174,7 +174,7 @@ li {
 .menu__theme-switcher {
   display: flex;
   align-items: center;
-  border: 1px solid #C1B6AD;
+  border: 1px solid var(--border-primary);
   border-radius: 10rem;
   gap: 0.8rem;
   padding: 0.4rem;
@@ -199,13 +199,13 @@ li {
 }
 
 .theme-switcher__btn.active {
-  background-color: #B0907A;
-  color: #e1d4c9;
+  background-color: var(--text-accent);
+  color: var(--text-inverse);
 }
 
-.theme-switcher__btn:hover {
-  background-color: #665f55;
-  color: #e1d4c9;
+.theme-switcher__btn:not(.active):hover {
+  background-color: var(--bg-container);
+  color: var(--text-inverse);
 }
 
 .wrapper__enjoy {
@@ -223,7 +223,7 @@ li {
 }
 
 .enjoy__title {
-  color: #E1D4C9;
+  color: var(--text-inverse);
   font-family: Inter;
   font-size: 72px;
   font-style: normal;
@@ -233,18 +233,18 @@ li {
 }
 
 .color__accent {
-  color: #B0907A;
+  color: var(--text-accent);
   font-style: italic;
 }
 
 .enjoy__text {
-  color: #E1D4C9;
+  color: var(--text-inverse);
   font-weight: 400;
 }
 
 .button__menu {
   border-radius: 100px;
-  background: #E1D4C9;
+  background: var(--text-inverse);
   width: 20rem;
   padding: 2rem 0;
   color: #403F3D;
@@ -290,9 +290,8 @@ li {
 .favorite__title,
 .about__title,
 .mobile__title,
-.footer__title,
 .menu__title {
-  color: #403F3D;
+  color: var(--text-primary);
   font-family: Inter;
   font-size: 6rem;
   font-style: normal;
@@ -447,7 +446,7 @@ li {
 
 .mobile__button {
   border-radius: 100px;
-  border: 1px solid #665F55;
+  border: 1px solid var(--border-inverse);
   background: transparent;
   display: flex;
   gap: 0.8rem;
@@ -456,12 +455,12 @@ li {
 }
 
 .mobile__button:hover {
-  background-color: #665F55;
+  background-color: var(--bg-container);
 }
 
 .mobile__button:hover > .mobile__text > .app_text,
 .mobile__button:hover > .mobile__text > .app_title {
-  color: #E1D4C9;
+  color: var(--text-inverse);
   transition: color 0.3s ease;
 }
 
@@ -479,13 +478,13 @@ li {
 }
 
 .app_text {
-  color: #403F3D;
+  color: var(--text-primary);
   font-size: 1rem;
   line-height: 1.4rem;
 }
 
 .app_title {
-  color: #403F3D;
+  color: var(--text-primary);
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
@@ -499,7 +498,7 @@ div.mobile__image {
   margin-bottom: 4rem;
   display: flex;
   align-items: center;
-  background-color: #665F55;
+  background-color: var(--bg-container);
   border-radius: 4rem;
 }
 
@@ -507,6 +506,15 @@ div.mobile__image {
   margin: 10rem;
   display: flex;
   gap: 10rem;
+}
+
+.footer__title {
+  color: var(--text-inverse);
+  font-family: Inter;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 7.5rem;
 }
 
 .footer__content {
@@ -525,14 +533,14 @@ div.mobile__image {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  border: 0.1rem solid #C1B6AD;
+  border: 0.1rem solid var(--border-primary);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .social_circle:hover {
-  background: #C1B6AD;
+  background: var(--border-primary);
 }
 
 .social_circle:hover svg path {
@@ -547,7 +555,7 @@ div.mobile__image {
 }
 
 .contact__title {
-  color: #E1D4C9;
+  color: var(--text-inverse);
   font-size: 2.4rem;
   line-height: 3rem;
 }
@@ -591,7 +599,7 @@ div.mobile__image {
 }
 
 .contact__text {
-  color: #E1D4C9;
+  color: var(--text-inverse);
 }
 
 /*---------------menu---------------------------------------------------------*/
@@ -620,31 +628,31 @@ div.mobile__image {
 
 .menu__button {
   border-radius: 10rem;
-  border: 1px solid #C1B6AD;
+  border: 1px solid var(--border-primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.8rem;
   padding: 0.8rem 1.6rem 0.8rem 0.8rem;
-  color: #403F3D;
+  color: var(--text-primary);
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 2.4rem;
 }
 
 .menu__button:hover {
-  background-color: #665F55;
+  background-color: var(--bg-container);
 }
 
 .menu__button:hover {
-  color: #E1D4C9;
+  color: var(--text-inverse);
   cursor: pointer;
 }
 
 .button_colored {
   border: none;
-  background: #665F55;
-  color: #E1D4C9;
+  background: var(--bg-container);
+  color: var(--text-inverse);
 }
 
 .button_colored:hover {
@@ -663,7 +671,7 @@ div.mobile__image {
   display: flex;
   flex-direction: column;
   width: 31rem;
-  border: 1px solid #C1B6AD;
+  border: 1px solid var(--border-primary);
   border-radius: 4rem;
 }
 
@@ -704,7 +712,7 @@ div.mobile__image {
 
 .card_menu-title,
 .card_menu-price {
-  color: #403F3D;
+  color: var(--text-primary);
   font-size: 2.4rem;
   font-weight: 600;
   line-height: 3rem;

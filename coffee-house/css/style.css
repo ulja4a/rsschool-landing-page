@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
+/*для Light-theme*/
+:root {
+  --text-primary: #403f3d;
+  --text-inverse: #e1d4c9;
+  --text-accent: #b0907a;
+
+  --bg-page: #e1d4c9;
+  --bg-container: #665f55;
+  --bg-overlay: rgba(64, 63, 61, 0.8);
+
+  --border-primary: #c1b6ad;
+  --border-inverse: #665f55;
+}
+
+/*для Dark-theme*/
+[data-theme="dark"] {
+  --text-primary: #e1d4c9;
+  --text-inverse: #e1d4c9;
+  --text-accent: #b0907a;
+
+  --bg-page: #292826;
+  --bg-container: #403f3d;
+  --bg-overlay: rgba(41, 40, 38, 0.8);
+
+  --border-primary: #665f55;
+  --border-inverse: #c1b6ad;
+}
 
 html {
   box-sizing: border-box;

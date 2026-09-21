@@ -544,7 +544,7 @@ li {
 }
 
 div.mobile__image {
-  width: 100%;
+  width: auto;
 }
 
 .wrapper__footer {

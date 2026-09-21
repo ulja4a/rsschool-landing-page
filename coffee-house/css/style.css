@@ -116,6 +116,7 @@ li {
 .wrapper {
   max-width: 1360px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .wrapper__header {
@@ -127,6 +128,12 @@ li {
 
 .logo__img {
   height: 60px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 65.5%;
 }
 
 .menu__list {
@@ -352,7 +359,7 @@ li {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  width: 48rem;
+  width: 100%;
   text-align: center;
 }
 
@@ -537,7 +544,7 @@ li {
 }
 
 div.mobile__image {
-  height: 63rem;
+  width: 100%;
 }
 
 .wrapper__footer {
@@ -839,6 +846,38 @@ div.mobile__image {
   background: var(--border-primary);
 }
 
+/*------------------------Slider-------------------------------*/
+
+.slider__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: max-content;
+  transition: 1s;
+}
+
+.slider__view {
+  position: relative;
+  margin: auto;
+  width: 48rem;
+  height: 64rem;
+  overflow: hidden;
+}
+
+.slider__img {
+  object-fit: cover;
+}
+
+@media (max-width: 520px) {
+  .slider__view {
+    width: 34.8rem;
+    height: 57.6rem;
+  }
+
+}
+/*---------------------end Slider-----------------------------*/
+
 /*-----------------------media query---------------------------*/
 @media (max-width: 1439px) {
   .wrapper {
@@ -902,9 +941,9 @@ div.mobile__image {
     flex-wrap: wrap;
   }
 
-  .menu {
+  /*.menu {
     width: auto;
-  }
+  }*/
 
   .menu__list {
     margin-right: 4rem;
@@ -1034,7 +1073,7 @@ div.mobile__image {
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 760px) {
   .slide__icon {
     display: none;
   }
@@ -1042,7 +1081,9 @@ div.mobile__image {
   .favorite__slider-main {
     justify-content: center;
   }
+}
 
+@media (max-width: 680px) {
   .wrapper {
     margin-left: 2rem;
     margin-right: 2rem;
@@ -1108,7 +1149,7 @@ div.mobile__image {
   }
 
   .slider__img {
-    width: 34.8rem;
+    width: 100%;
   }
 
   br {
@@ -1126,15 +1167,12 @@ div.mobile__image {
 
   .slider__card-content {
     padding-top: 1.4rem;
-    width: 34.8rem;
+    padding-bottom: 1.4rem;
+    width: 100%;
   }
 
   .about_image {
     scale: 1.25;
-  }
-
-  div.mobile__image {
-    height: 34.8rem;
   }
 
   .footer__main {

@@ -663,6 +663,7 @@ div.mobile__image {
   border-radius: 10rem;
   border: 1px solid var(--border-inverse);
   gap: 0.8rem;
+  cursor: pointer;
 }
 
 .hamburger-line {
@@ -830,7 +831,12 @@ div.mobile__image {
   justify-content: center;
   align-items: center;
   border-radius: 10rem;
-  border: 0.1rem solid #665F55;
+  border: 0.1rem solid var(--border-inverse);
+  cursor: pointer;
+}
+
+.menu__load:hover {
+  background: var(--border-primary);
 }
 
 /*-----------------------media query---------------------------*/

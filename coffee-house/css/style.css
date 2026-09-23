@@ -682,6 +682,10 @@ div.mobile__image {
   border: 0.15rem solid var(--text-primary);
 }
 
+.header__menu-mobile {
+  display: none;
+}
+
 /*---------------menu---------------------------------------------------------*/
 
 .wrapper__menu {
@@ -923,7 +927,7 @@ div.mobile__image {
   }
 }
 
-@media (max-width: 1230px) {
+@media (max-width: 1024px) {
   .header__hamburger {
     display: flex;
   }
@@ -961,26 +965,30 @@ div.mobile__image {
 
   
   .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 16rem;
-    padding-bottom: 36.4rem;
-    gap: 10rem;
-    position: fixed;
-    background-color: #E1D4C9;
-    margin: 0;
-    right: 0;
-    top: 0;    
-    width: 100%;
-    height: 100vh;
-    transform: translateX(100%);
-    z-index: 2;
-    transition: all 0.5s linear;
-    color: var(--text-dark, #403F3D);
-    font-size: 3.2rem;
-    font-weight: 600;
-    line-height: 4rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(76.8rem, 100%);
+  height: 100dvh;
+  padding: 12rem 3rem 4rem;
+  gap: 6rem;
+  overflow-y: auto;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  z-index: 2;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3rem;
+  }
+
+  .menu__list-item::before {
+  top: auto;
+  bottom: -0.8rem;
   }
 
   .menu-activ {
@@ -1011,8 +1019,12 @@ div.mobile__image {
     gap: 6rem;
   }
 
-  .header__menu {
-    display: none;
+  .header__right > .header__menu {
+  display: none;
+}
+
+  .header__menu-mobile {
+    display: block;
   }
 
   .header__menu::after {
@@ -1024,8 +1036,24 @@ div.mobile__image {
     margin-left: 1.6rem;
   }
 
+  .header__menu-mobile::after {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: 0.8rem;
+  }
+
   .menu__list-item-noactive::before {
     top: 4rem;
+  }
+
+  .menu__theme-switcher {
+  position: relative;
+  z-index: 4;
+  }
+
+  .header__right {
+  position: relative;
+  z-index: 4;
   }
 
    /*-------------page menu------------------*/

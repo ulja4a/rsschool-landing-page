@@ -37,6 +37,15 @@ document.addEventListener('click', (event) => {
   }
 });
 
+document.addEventListener('keydown', (event) => {
+  if (
+    event.key === 'Escape' &&
+    burgerMenu.classList.contains('menu-activ')
+  ) {
+    closeBurgerMenu();
+  }
+});
+
 function closeBurgerMenu() {
   burger.classList.remove('hamburger-activ');
   burgerMenu.classList.remove('menu-activ');

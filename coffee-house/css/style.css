@@ -1196,12 +1196,13 @@ div.mobile__image {
 }
 
 @media (max-width: 1024px) {
-  .header__hamburger {
-    display: flex;
+  .menu__list {
+    gap: 2rem;
+    font-size: 1.5rem;
   }
 
-  .header__right {
-    gap: 2.4rem;
+  .logo_menu {
+    margin-right: 1rem;
   }
 
   .wrapper__mobile {
@@ -1213,6 +1214,23 @@ div.mobile__image {
     flex-wrap: wrap;
   }
 
+   /*-------------page menu------------------*/
+
+  .menu__title {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .header__hamburger {
+    display: flex;
+  }
+
+  .header__right {
+    gap: 2.4rem;
+  }
 
   .menu__list {
     margin-right: 4rem;
@@ -1320,16 +1338,6 @@ div.mobile__image {
   position: relative;
   z-index: 4;
   }
-
-   /*-------------page menu------------------*/
-
-  .menu__title {
-    width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width: 768px) {
 
   .enjoy__content {
     padding: 10rem 0 10rem 6rem;

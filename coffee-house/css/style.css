@@ -190,6 +190,7 @@ li {
 .header__menu {
   position: relative;
   padding-right: 2.8rem;
+  cursor: pointer;
 }
 
 .header__menu::after {
